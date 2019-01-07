@@ -1,0 +1,147 @@
+.header{
+    background: #fff;
+    height: rem(80px);
+    display: flex;
+    justify-content: space-between;
+    color:$color-primary;
+    box-shadow: 0px rem(1px) rem(1px) rgba(0,0,0,.2);
+    position: fixed;
+    width: 100%;
+
+    &__container{
+        width:1200px;
+        margin: 0 auto;
+
+        @include responsive(medium){
+           // background: red;
+        }
+        @include responsive(small){
+            //background: green;
+        }
+        @include responsive(x-small){
+            //background: blue;
+        }
+
+    }
+
+    &__logo{
+        position: absolute;
+       
+    }
+
+    &__desktop{
+        
+        &-nav{
+            text-align: right;
+            @include responsive(small){
+                display: none;
+            }
+        }
+        &-items{
+        }
+        &-item{
+            display: inline-block;
+            font-size: rem(14px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding:rem(32px) rem(15px);
+            font-family: $font-header;
+            cursor: pointer;
+
+            &:hover{
+                border-bottom: 3px solid red;
+            }
+        }
+    }
+
+    &__mobile{
+        &-nav{
+            display: none;
+            text-align: right;
+            @include responsive(small){
+                display: block;
+            }
+        }
+
+        &-hesburger{
+            width: rem(30px);
+            float: right;
+            position: relative;
+            top:rem(32px);
+            right: rem(32px);
+            z-index: 200;
+            cursor: pointer;
+            
+            &--open{
+                height:rem(25px);
+                .header__mobile-line{
+                    &:last-of-type{
+                        display: none;
+                       
+                    }
+                    &:first-of-type{
+                        transform: rotate(45deg);
+                        position: absolute;
+                    }
+                    &:nth-child(even){
+                        transform: rotate(-45deg);
+                        position: absolute;
+                    }
+                }
+            }
+            
+        }
+
+        &-line{
+            height:2px;
+            width: 22px;
+            background: red;
+            margin-bottom: 3px;
+            @include transition-slow;
+
+        }
+        &-items{
+            
+            position: fixed;
+            height: 100vh;
+            z-index: 100;
+            width: 300px;
+            right: -300px;
+            padding-top: rem(80px);
+            background: rgb(0, 0, 0);
+            opacity: .8;
+            @include transition-slow;
+
+            &--open{
+                right:rem(0px);
+
+            }
+        }
+
+        &-item{
+            text-align: left;
+            font-size: rem(14px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding:rem(15px);
+            font-family: $font-header;
+            color:#fff;
+            &:first-of-type{
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            cursor: pointer;
+           
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            @include transition-slow;
+
+            &:hover{
+                border-left: 3px solid red;
+                
+            }
+        }
+       
+    }
+
+
+    
+}

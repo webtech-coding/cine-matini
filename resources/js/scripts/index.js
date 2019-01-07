@@ -15,6 +15,7 @@ function () {
     this.api = "https://api.themoviedb.org/3/movie/404368/images";
     this.api_key = "220db9d772820f55fd7e39476eef1d78";
     this.url = this.api + "?api_key=" + this.api_key;
+    this.image_api = "https://image.tmdb.org/t/p/w500/";
     this.service();
   }
 

@@ -1,0 +1,41 @@
+@mixin clearfix{
+    display: table;
+    content: "";
+    clear: both;
+}
+@mixin container{
+    width:$container;
+    margin: 0 auto;
+    
+}   
+@mixin transition-fast{
+    transition: all .2s ease-out;
+}
+
+@mixin transition-slow{
+    transition: all .4s ease-out;
+}
+
+@mixin responsive($device){
+    //default target device -  
+    @if($device==medium){
+        @media only screen and (max-width:rem(1200px)){
+            @content;
+        }
+    }
+    @if($device==small){
+        @media only screen and (max-width:rem(900px)){
+            @content;
+        }
+    }
+    @if($device==x-small){
+        @media only screen and (max-width:rem(600px)){
+            @content;
+        }
+    }
+    @if($device==x-large){
+        @media only screen and (min-width:rem(1800px)){
+            @content;
+        }
+    }
+}
