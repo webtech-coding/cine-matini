@@ -172,9 +172,90 @@ h4 {
 .banner {
   width: 100%;
   margin-top: 5rem;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
+  .banner .slick-prev {
+    display: none !important; }
+  .banner .slick-next {
+    display: none !important; }
+  .banner__prev {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    left: 5%;
+    background: 'a&#770';
+    color: #fff;
+    font-size: 1.25rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    border: 2px solid #007082;
+    background: #007082;
+    border-radius: 50%;
+    margin-right: 50px;
+    cursor: pointer; }
+    @media only screen and (max-width: 75rem) {
+      .banner__prev {
+        top: 25%; } }
+    @media only screen and (max-width: 56.25rem) {
+      .banner__prev {
+        display: none !important; } }
+  .banner__next {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: #fff;
+    font-size: 1.25rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    border: 2px solid #007082;
+    border-radius: 50%;
+    background: #007082;
+    cursor: pointer; }
+    @media only screen and (max-width: 75rem) {
+      .banner__next {
+        top: 25%; } }
+    @media only screen and (max-width: 56.25rem) {
+      .banner__next {
+        display: none !important; } }
+  .banner__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase; }
+    .banner__title-header {
+      color: #007082;
+      font-size: 3.125rem;
+      background: #fff;
+      display: inline-block;
+      padding: 0.3125rem 0.625rem; }
+      @media only screen and (max-width: 56.25rem) {
+        .banner__title-header {
+          font-size: 1.5625rem; } }
+      @media only screen and (max-width: 37.5rem) {
+        .banner__title-header {
+          font-size: 1.25rem; } }
+    .banner__title-subheader {
+      color: #007082;
+      font-size: 2.5rem;
+      background: #fff;
+      padding: 0.625rem 1.25rem;
+      margin-top: 0.625rem; }
+      @media only screen and (max-width: 56.25rem) {
+        .banner__title-subheader {
+          font-size: 1.5625rem; } }
+      @media only screen and (max-width: 37.5rem) {
+        .banner__title-subheader {
+          font-size: 1rem; } }
+  .banner__icon {
+    position: relative;
+    left: 13px;
+    top: 12px; }
   .banner__picture {
-    display: block; }
+    display: block;
+    width: 100%;
+    position: relative; }
 
 /* Slider */
 .slick-slider {

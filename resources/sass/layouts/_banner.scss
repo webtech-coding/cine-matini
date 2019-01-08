@@ -2,8 +2,110 @@
     width: 100%;
     margin-top: rem(80px);
     height:100vh;
+    position: relative;
+
+    .slick-prev{
+        display: none !important; 
+    }
+    .slick-next{
+        display: none !important;
+    }
+
+    &__prev{
+        position: absolute;
+        top:50%;
+        z-index: 100;
+        left:5%;
+        background: 'a&#770';
+        color: #fff;
+        font-size: rem(20px);
+        height:rem(50px);
+        width: rem(50px);
+        border:2px solid $color-secondary;
+        background: $color-secondary;
+        border-radius: 50%;
+        margin-right: 50px;
+        cursor: pointer;
+        
+        @include responsive(medium){
+            top:25%;
+        }
+        @include responsive(small){
+            display: none !important;
+        }
+    }
+
+    &__next{
+        position: absolute;
+        top:50%;
+        right: 5%;
+        color: #fff;
+        font-size: rem(20px);
+        height:rem(50px);
+        width: rem(50px);
+        border:2px solid $color-secondary;
+        border-radius: 50%;
+        background: $color-secondary;
+        cursor: pointer;
+
+        @include responsive(medium){
+            top:25%;
+        }
+        @include responsive(small){
+            display: none !important;
+        }
+    }
+
+    &__title{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        text-transform: uppercase;
+
+        &-header{
+           color: $color-secondary;
+           font-size: rem(50px);
+           background: #fff;
+           display: inline-block;
+           padding:rem(5px) rem(10px);
+
+            @include responsive(small){
+                font-size: rem(25px);
+            }
+            @include responsive(x-small){
+                font-size: rem(20px);
+            }
+           
+        }
+        &-subheader{
+           color: $color-secondary;
+           font-size: rem(40px);
+           background: #fff;
+           padding:rem(10px) rem(20px);
+           margin-top: rem(10px);
+           @include responsive(small){
+                font-size: rem(25px);
+            }
+            @include responsive(x-small){
+                font-size: rem(16px);
+            }
+        }
+    }
+
+    &__icon{
+        position: relative;
+        left:13px;
+        top:12px;
+    }
+
     &__picture{
         display: block;
+        width: 100%;
+        position: relative;
+        
+
     }
     
 }

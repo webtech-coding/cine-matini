@@ -7,6 +7,7 @@
     <title>Cine matine</title>
     <link rel="stylesheet" href="resources/styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
     
@@ -45,24 +46,46 @@
     </header>
     
     <section class="banner">
-        <picture class="banner__picture">
-            <source srcset="resources/images/junglebook.jpg" media="(min-width:1920px)"/>
-            <source srcset="resources/images/junglebookX1920.jpg" media="(min-width:1600px)"/>
-            <source srcset="resources/images/junglebookX1600.jpg" media="(min-width:1200px)"/>
-            <source srcset="resources/images/junglebookX1200.jpg" media="(min-width:900px)"/>
-            <source srcset="resources/images/junglebookX900.jpg" media="(min-width:640px)"/>
-            <source srcset="resources/images/junglebookX640.jpg" media="(min-width:0px)"/>
-            <img src="resources/images/junglebook.jpg">
-        </picture>
-        <picture class="banner__picture">
-            <source srcset="resources/images/junglebook.jpg" media="(min-width:1920px)"/>
-            <source srcset="resources/images/junglebookX1920.jpg" media="(min-width:1600px)"/>
-            <source srcset="resources/images/junglebookX1600.jpg" media="(min-width:1200px)"/>
-            <source srcset="resources/images/junglebookX1200.jpg" media="(min-width:900px)"/>
-            <source srcset="resources/images/junglebookX900.jpg" media="(min-width:640px)"/>
-            <source srcset="resources/images/junglebookX640.jpg" media="(min-width:0px)"/>
-            <img src="resources/images/junglebook.jpg">
-        </picture>
+        <div class="banner__images">
+            <picture class="banner__picture">
+                <source srcset="resources/images/junglebook.jpg" media="(min-width:1920px)"/>
+                <source srcset="resources/images/junglebookX1920.jpg" media="(min-width:1600px)"/>
+                <source srcset="resources/images/junglebookX1600.jpg" media="(min-width:1200px)"/>
+                <source srcset="resources/images/junglebookX1200.jpg" media="(min-width:900px)"/>
+                <source srcset="resources/images/junglebookX900.jpg" media="(min-width:640px)"/>
+                <source srcset="resources/images/junglebookX640.jpg" media="(min-width:0px)"/>
+                <img src="resources/images/junglebook.jpg">
+                <div class="banner__title">
+                    <h1 class="banner__title-header">
+                        In 3D  
+                    </h1>
+                    <h2 class="banner__title-subheader">
+                        The Jungle Book
+                    </h2>
+                </div>
+            </picture>
+        
+            <picture class="banner__picture">
+                <source srcset="resources/images/jumangi.jpg" media="(min-width:1920px)"/>
+                <source srcset="resources/images/jumangiX1920.jpg" media="(min-width:1600px)"/>
+                <source srcset="resources/images/jumangiX1600.jpg" media="(min-width:1200px)"/>
+                <source srcset="resources/images/jumangiX1200.jpg" media="(min-width:900px)"/>
+                <source srcset="resources/images/jumangiX900.jpg" media="(min-width:640px)"/>
+                <source srcset="resources/images/jumangiX640.jpg" media="(min-width:0px)"/>
+                <img src="resources/images/jumangi.jpg">
+                <div class="banner__title">
+                    <h1 class="banner__title-header">
+                        In 2D
+                    </h1>
+                    <h2 class="banner__title-subheader">
+                       Coming soon
+                    </h2>
+                   
+                </div>
+            </picture>
+        </div>
+        <div class="banner__next"><span class="fas fa-arrow-right banner__icon"></span></div>
+        <div class="banner__prev"><span class="fas fa-arrow-left banner__icon"></span></div>
         
     </section>
     
@@ -76,13 +99,15 @@
 
 <script>
     $(document).ready(function(){
-        $('.banner').slick({
+        $('.banner__images').slick({
             autoplay:true,
             infinite:true,
             fade:false,
-            dots:true,
+            
             autoplaySpeed:5000,
-            useTransform: false
+            useTransform: false,
+            prevArrow:$('.banner__prev'),
+            nextArrow:$('.banner__next')
         });
     });
 </script>
