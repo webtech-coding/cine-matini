@@ -13,7 +13,7 @@
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                LOGO
+               <img src="resources/images/logo-01.png" class="header__logo-img">
             </div>
             <nav class="header__desktop-nav">
                 <ul class="header__desktop-items">
@@ -26,8 +26,7 @@
                 </ul>
             </nav>
     
-            <nav class="header__mobile-nav">
-              
+            <nav class="header__mobile-nav">              
                 <div class="header__mobile-hesburger">
                     <div class="header__mobile-line"></div>
                     <div class="header__mobile-line"></div>
@@ -45,9 +44,47 @@
         </div>
     </header>
     
-
+    <section class="banner">
+        <picture class="banner__picture">
+            <source srcset="resources/images/junglebook.jpg" media="(min-width:1920px)"/>
+            <source srcset="resources/images/junglebookX1920.jpg" media="(min-width:1600px)"/>
+            <source srcset="resources/images/junglebookX1600.jpg" media="(min-width:1200px)"/>
+            <source srcset="resources/images/junglebookX1200.jpg" media="(min-width:900px)"/>
+            <source srcset="resources/images/junglebookX900.jpg" media="(min-width:640px)"/>
+            <source srcset="resources/images/junglebookX640.jpg" media="(min-width:0px)"/>
+            <img src="resources/images/junglebook.jpg">
+        </picture>
+        <picture class="banner__picture">
+            <source srcset="resources/images/junglebook.jpg" media="(min-width:1920px)"/>
+            <source srcset="resources/images/junglebookX1920.jpg" media="(min-width:1600px)"/>
+            <source srcset="resources/images/junglebookX1600.jpg" media="(min-width:1200px)"/>
+            <source srcset="resources/images/junglebookX1200.jpg" media="(min-width:900px)"/>
+            <source srcset="resources/images/junglebookX900.jpg" media="(min-width:640px)"/>
+            <source srcset="resources/images/junglebookX640.jpg" media="(min-width:0px)"/>
+            <img src="resources/images/junglebook.jpg">
+        </picture>
+        
+    </section>
     
     <script src="resources/js/scripts/index.js"></script>
     <script src="resources/js/scripts/navigation.js"></script>
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="resources/js/scripts/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.banner').slick({
+            autoplay:true,
+            infinite:true,
+            fade:false,
+            dots:true,
+            autoplaySpeed:5000,
+            useTransform: false
+        });
+    });
+</script>
 </body>
 </html>
