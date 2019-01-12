@@ -1,0 +1,139 @@
+
+%button{
+    padding:rem(15px);
+    color:#fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: rem(12px);
+    font-family: $font-header;
+    cursor: pointer;
+    @include transition-slow;
+}
+
+.category{
+  
+    padding:rem(80px) rem(0px);
+
+    &__container{
+        width:1200px;
+        margin: 0 auto;
+
+        @include responsive(medium){
+            padding-left: rem(25px)
+        }
+        @include responsive(small){
+           padding-left: rem(25px)
+        }
+        @include responsive(x-small){
+            //background: blue;
+        }
+
+    }
+
+    &__title{
+        padding: rem(20px) 0rem;
+        text-transform: uppercase;
+        font-family: $font-secondary;
+        color:$color-secondary;
+        letter-spacing: 2px;
+        font-weight: 100 !important;
+        font-size: rem(45px);
+        
+    }
+
+    &__buttons{
+        margin-top: rem(10px) rem(0px);
+    }
+
+    &__button{
+        
+        background:#3d4349;
+        margin-right: rem(20px);
+        @extend %button;
+
+        &--active{
+            background: red;
+        }
+
+        &-ticket{
+            width: 80%;
+            margin-left: 10%;
+            @extend %button;
+            background: $color-secondary;
+           
+        }
+    }
+
+    &__movies{
+        padding:rem(20px) 0px;
+
+        &::after{
+            @include clearfix;
+        }
+
+        &-container{
+            width: 100%;
+            overflow: hidden;
+            padding:rem(35px) 0rem;
+
+            &--hide{
+                display: none;
+            }
+            
+        }
+    }
+
+    &__movie{
+        float: left;
+        width: calc(25%);
+        position: relative;
+        cursor: pointer;
+       
+        &-poster{
+            width: 100%;
+            @include transition-slow;
+            &:hover{
+                opacity: .4;
+                
+            }
+        }
+        &-detail{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            font-size: rem(16px);
+            color:#fff;
+        }
+        &-icon{
+            height: rem(50px);
+            width: rem(50px);
+            background: $color-secondary;
+            border-radius: 50%;
+            padding-left: rem(18px);
+            padding-top: rem(17px);
+        }
+
+        &-title{
+            padding: rem(8px) 0px;
+            font-family: $font-header;
+            text-align:  center;
+            color: $color-secondary;
+            font-size: rem(16px);
+
+        }
+        &-release{
+            padding: rem(6px) 0px;
+            text-align: center;
+            color:#878787;
+            font-size: rem(12px);
+        }
+        &-rating{
+            text-align: center;
+            color:#878787;
+            font-size: rem(12px);
+            
+        }
+    }
+
+}

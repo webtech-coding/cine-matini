@@ -1,7 +1,34 @@
+%prev-next-buttons{
+    top:50%;
+    z-index: 100;
+    background: 'a&#770';
+    color: #fff;
+    font-size: rem(20px);
+    height:rem(50px);
+    width: rem(50px);
+    border:2px solid $color-secondary;
+    background: $color-secondary;
+    border-radius: 50%;
+    cursor: pointer;
+    @include transition-slow;
+
+    &:hover{
+        background: #fff;
+        color: $color-secondary;
+        opacity: .6;
+        border:2px solid #fff;
+    }
+    @include responsive(medium){
+        top:45%;
+    }
+    @include responsive(small){
+        display: none !important;
+    }
+}
+
 .banner{
     width: 100%;
     margin-top: rem(80px);
-    height:100vh;
     position: relative;
 
     .slick-prev{
@@ -13,47 +40,18 @@
 
     &__prev{
         position: absolute;
-        top:50%;
-        z-index: 100;
         left:5%;
-        background: 'a&#770';
-        color: #fff;
-        font-size: rem(20px);
-        height:rem(50px);
-        width: rem(50px);
-        border:2px solid $color-secondary;
-        background: $color-secondary;
-        border-radius: 50%;
         margin-right: 50px;
-        cursor: pointer;
-        
-        @include responsive(medium){
-            top:25%;
-        }
-        @include responsive(small){
-            display: none !important;
-        }
+        @extend %prev-next-buttons;
+
     }
 
     &__next{
         position: absolute;
-        top:50%;
         right: 5%;
-        color: #fff;
-        font-size: rem(20px);
-        height:rem(50px);
-        width: rem(50px);
-        border:2px solid $color-secondary;
-        border-radius: 50%;
-        background: $color-secondary;
-        cursor: pointer;
-
-        @include responsive(medium){
-            top:25%;
-        }
-        @include responsive(small){
-            display: none !important;
-        }
+       
+        @extend %prev-next-buttons;
+        
     }
 
     &__title{

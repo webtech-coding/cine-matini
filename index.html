@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cine matine</title>
+    <title>CINE MATINI</title>
     <link rel="stylesheet" href="resources/styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto|Spicy+Rice" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="icon" href="resources/images/logo-01.png" type="image/x-icon"/>
 </head>
 <body>
     
@@ -60,7 +61,7 @@
                         In 3D  
                     </h1>
                     <h2 class="banner__title-subheader">
-                        The Jungle Book
+                        Showing Now 
                     </h2>
                 </div>
             </picture>
@@ -78,7 +79,7 @@
                         In 2D
                     </h1>
                     <h2 class="banner__title-subheader">
-                       Coming soon
+                       Next Release
                     </h2>
                    
                 </div>
@@ -88,9 +89,32 @@
         <div class="banner__prev"><span class="fas fa-arrow-left banner__icon"></span></div>
         
     </section>
+
+    <section class="category">
+        <div class="category__container">
+            <h2 class="category__title">
+                In Cine-matini shows
+            </h2>
+            <div class="category__buttons">
+                <button class="category__button category__button--active" data-id="now_playing">Now Showing</button>
+                <button class="category__button" data-id="upcoming">Next Releases</button>
+                <button class="category__button" data-id="top_rated">Top Rated</button>
+                <button class="category__button" data-id="popular">Popular</button>
+            </div>
+
+            <div class="category__movies">
+                
+            </div>
+
+        </div>
+    </section>
     
+    <script src="resources/js/scripts/config.js"></script>
     <script src="resources/js/scripts/index.js"></script>
     <script src="resources/js/scripts/navigation.js"></script>
+    <script src="resources/js/scripts/filter.js"></script>
+
+
 
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -103,13 +127,13 @@
             autoplay:true,
             infinite:true,
             fade:false,
-            
-            autoplaySpeed:5000,
+            autoplaySpeed:3000,
             useTransform: false,
             prevArrow:$('.banner__prev'),
             nextArrow:$('.banner__next')
         });
     });
 </script>
+
 </body>
 </html>
