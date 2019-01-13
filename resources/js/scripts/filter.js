@@ -49,8 +49,6 @@ function () {
     key: "toggleActive",
     value: function toggleActive(button) {
       this.buttons.forEach(function (btn) {
-        console.log('shovit');
-
         if (btn === button) {
           btn.classList.add('category__button--active');
         } else {

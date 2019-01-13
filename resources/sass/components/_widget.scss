@@ -1,0 +1,55 @@
+.widget{
+    width: 100%;
+    position: relative;
+    height:rem(500px);
+
+    &__image{
+        background-image: url('../../../resources/images/movie_hall.jpg');
+        width: 100%;
+        background-size: cover;
+        height:rem(500px);
+        overflow: hidden;
+    }
+
+    &__content{
+        position: absolute;
+        top:50%;
+        left:50%;
+        z-index: 100;
+        color: #fff;
+        transform: translate(-50%,-50%);
+        text-align: center;
+
+        @include responsive(small){
+            left:10%;
+            transform: translate(0%,-50%);
+            width: 80%;
+        }
+
+    }
+    &__heading{
+        text-transform: uppercase;
+        font-family: $font-regular;
+        letter-spacing: 4px;
+
+        @include responsive(small){
+            font-size: rem(30px);
+        }
+    }
+
+    &__sub-heading{
+        font-size: rem(16px);
+        margin-top: rem(40px);
+        line-height: rem(30px);
+        background:$color-secondary;
+        color: #fff;
+        padding:rem(20px) rem(10px);
+        border-radius: rem(2px);
+        opacity: .9;
+        letter-spacing: 1px;
+    }
+
+
+
+
+}

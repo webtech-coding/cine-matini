@@ -98,7 +98,7 @@ h4 {
   .category__title {
     padding: 1.25rem 0rem;
     text-transform: uppercase;
-    font-family: "Spicy Rice", cursive;
+    font-family: "Abril Fatface", cursive;
     color: #007082;
     letter-spacing: 2px;
     font-weight: 100 !important;
@@ -197,6 +197,95 @@ h4 {
       color: #878787;
       font-size: 0.875rem;
       letter-spacing: 1px; }
+
+.widget {
+  width: 100%;
+  position: relative;
+  height: 31.25rem; }
+  .widget__image {
+    background-image: url("../../../resources/images/movie_hall.jpg");
+    width: 100%;
+    background-size: cover;
+    height: 31.25rem;
+    overflow: hidden; }
+  .widget__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    @media only screen and (max-width: 56.25rem) {
+      .widget__content {
+        left: 10%;
+        transform: translate(0%, -50%);
+        width: 80%; } }
+  .widget__heading {
+    text-transform: uppercase;
+    font-family: "Abril Fatface", cursive;
+    letter-spacing: 4px; }
+    @media only screen and (max-width: 56.25rem) {
+      .widget__heading {
+        font-size: 1.875rem; } }
+  .widget__sub-heading {
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    line-height: 1.875rem;
+    background: #007082;
+    color: #fff;
+    padding: 1.25rem 0.625rem;
+    border-radius: 0.125rem;
+    opacity: .9;
+    letter-spacing: 1px; }
+
+.subscribe {
+  margin: 2.5rem 0.625rem; }
+  .subscribe__container {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center; }
+    @media only screen and (max-width: 75rem) {
+      .subscribe__container {
+        width: 100%; } }
+  .subscribe__header {
+    color: #007082; }
+    @media only screen and (max-width: 75rem) {
+      .subscribe__header {
+        font-size: 1.375rem; } }
+  .subscribe__social {
+    margin-top: 1.25rem; }
+    .subscribe__social-icon {
+      padding: 0.625rem;
+      color: #fff;
+      background: red;
+      cursor: pointer; }
+  .subscribe__label {
+    margin: 0.9375rem 0;
+    font-size: 1rem; }
+  .subscribe__form {
+    width: 100%;
+    outline: none; }
+    .subscribe__form-content {
+      margin-top: 1.25rem;
+      width: 1005; }
+  .subscribe__input {
+    outline: none;
+    width: 50%;
+    height: 1.25rem;
+    font-size: 1.125rem;
+    color: #5e5e5e;
+    font-weight: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    .subscribe__input--error {
+      border-bottom: 1px solid red; }
+  .subscribe__button {
+    background: #007082;
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer; }
 
 .header {
   top: 0;
@@ -383,6 +472,23 @@ h4 {
     display: block;
     width: 100%;
     position: relative; }
+
+.footer {
+  height: 50px;
+  background: #007082;
+  color: #fff;
+  letter-spacing: 1px; }
+  .footer__container {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; }
+    @media only screen and (max-width: 75rem) {
+      .footer__container {
+        width: 100%; } }
 
 /* Slider */
 .slick-slider {

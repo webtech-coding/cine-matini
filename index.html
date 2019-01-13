@@ -103,37 +103,83 @@
             </div>
 
             <div class="category__movies">
-                
             </div>
-
         </div>
+    </section>
+
+    <section class="widget">
+        <div class="widget__image">
+        </div>
+        <div class="widget__content">
+            <h1 class="widget__heading">Welcome to Cine-matini</h1>
+            <p class="widget__sub-heading">
+                    Join your favorite monster family as they embark on a luxury cruise ship. Book a group or family tickets for movie Hotel Transylvania 3: Summer Vacation  and get tickets for $5 per person, for groups 7+ Mon-Fri until 6pm.
+            </p>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="subscribe__container">
+            <h1 class="subscribe__header">
+                    Follow Our Cinemas on Socials Networks
+            </h1>
+            <div class="subscribe__social">
+                    <span class="fab fa-facebook-f subscribe__social-icon"></span>
+                    <span class="fab fa-twitter subscribe__social-icon"></span>
+                    <span class="fab fa-instagram subscribe__social-icon"></span>
+                    <span class="fab fa-youtube subscribe__social-icon"></span>
+                    <span class="fab fa-google-plus-g subscribe__social-icon"></span>
+            </div>
+            <p class="subscribe__label">
+                Subscribe to our mailing list and get interesting news to your email inbox.
+            </p>
+            <form action="#" class="subscribe__form" method="POST" novalidate>
+                <div class="subscribe__form-content">
+                    <input type="text" autocomplete="off" name="email" class="subscribe__input" required>
+                    <input type="submit" value="Subscribe" class="subscribe__button" disabled>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="footer">
+       <div class="footer__container">
+           <div class="footer__left">
+                <span class="fas fa-phone"><span> Call us directly (+358) 012341985
+           </div>
+           <div class="footer__right">
+                <span class="fas fa-envelope"></span> Send us an email : cine-matini@gmail.com
+           </div>
+       </div>
     </section>
     
     <script src="resources/js/scripts/config.js"></script>
     <script src="resources/js/scripts/index.js"></script>
     <script src="resources/js/scripts/navigation.js"></script>
     <script src="resources/js/scripts/filter.js"></script>
+    <script src="resources/js/scripts/form.js"></script>
 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="resources/js/scripts/slick.min.js"></script>
+    
+    <script>
+        new Form('.subscribe__form')
+    </script>
 
-
-
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="resources/js/scripts/slick.min.js"></script>
-
-<script>
-    $(document).ready(function(){
-        $('.banner__images').slick({
-            autoplay:true,
-            infinite:true,
-            fade:false,
-            autoplaySpeed:3000,
-            useTransform: false,
-            prevArrow:$('.banner__prev'),
-            nextArrow:$('.banner__next')
+    <script>
+        $(document).ready(function(){
+            $('.banner__images').slick({
+                autoplay:true,
+                infinite:true,
+                fade:false,
+                autoplaySpeed:3000,
+                useTransform: false,
+                prevArrow:$('.banner__prev'),
+                nextArrow:$('.banner__next')
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 </html>

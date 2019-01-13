@@ -1,0 +1,23 @@
+.footer{
+    height: 50px;
+    background: $color-secondary;
+    color: #fff;
+
+    letter-spacing: 1px;
+
+    &__container{
+        width:1200px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+
+        @include responsive(medium){
+            width: 100%;
+        }
+    }
+
+   
+}

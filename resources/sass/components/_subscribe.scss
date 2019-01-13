@@ -1,0 +1,76 @@
+.subscribe{
+
+    margin: rem(40px) rem(10px);
+    
+    &__container{
+        width:1200px;
+        margin: 0 auto;
+        text-align: center;
+
+        @include responsive(medium){
+            width: 100%;
+        }
+    }
+
+    &__header{
+        color: $color-secondary;
+
+        @include responsive(medium){
+            font-size: rem(22px);
+        }
+
+    }
+
+    &__social{
+        margin-top: rem(20px);
+
+        &-icon{
+            padding: rem(10px);
+            color: #fff;
+            background: red;
+            cursor: pointer;
+        }
+    }
+
+    &__label{
+        margin: rem(15px) 0;
+        font-size: rem(16px);
+
+    }
+
+    &__form{
+        width: 100%;
+        outline: none;
+       
+
+        &-content{
+            margin-top: rem(20px);
+            width: 1005;
+        }
+        
+    }
+
+    &__input{
+        outline: none;
+        width: 50%;
+        height: rem(20px);
+        font-size: rem(18px);
+        color:rgb(94, 94, 94);
+        font-weight: 100;
+        border-bottom: 1px solid rgba(0,0,0,.2);
+
+        &--error{
+          border-bottom: 1px solid red;  
+        }
+    }
+
+    &__button{
+        background: $color-secondary;
+        padding:20px;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+}
