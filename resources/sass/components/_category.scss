@@ -8,24 +8,40 @@
     font-family: $font-header;
     cursor: pointer;
     @include transition-slow;
+
+    @include responsive(small){
+        padding:rem(15px) rem(10px);
+        
+     }
 }
 
 .category{
   
     padding:rem(80px) rem(0px);
 
+    @include responsive(medium){
+        padding:rem(20px) rem(0px);
+        
+    }
+
     &__container{
         width:1200px;
         margin: 0 auto;
 
         @include responsive(medium){
-            padding-left: rem(25px)
+            padding-left: rem(25px);
+            width: 100%;
+            
         }
         @include responsive(small){
-           padding-left: rem(25px)
+           padding-left: rem(25px);
+           width: 100%;
+           
         }
         @include responsive(x-small){
             //background: blue;
+            width: 100%;
+            
         }
 
     }
@@ -38,6 +54,16 @@
         letter-spacing: 2px;
         font-weight: 100 !important;
         font-size: rem(45px);
+
+        @include responsive(medium){
+            font-size: rem(30px);
+        }
+        @include responsive(small){
+            font-size: rem(22px);
+        }
+        @include responsive(x-small){
+            font-size: rem(22px);
+        }
         
     }
 
@@ -49,6 +75,13 @@
         
         background:#3d4349;
         margin-right: rem(20px);
+
+        @include responsive(x-small){
+            
+            margin-right: rem(10px);
+            font-size: rem(10px);
+            
+        }
         @extend %button;
 
         &--active{
@@ -60,12 +93,18 @@
             margin-left: 10%;
             @extend %button;
             background: $color-secondary;
+
+            @include responsive(x-small){
+                width: 100%;
+                margin-left: 0px;
+                
+            }
            
         }
     }
 
     &__movies{
-        padding:rem(20px) 0px;
+        padding:rem(10px) 0px;
 
         &::after{
             @include clearfix;
@@ -75,6 +114,9 @@
             width: 100%;
             overflow: hidden;
             padding:rem(35px) 0rem;
+            @include responsive(medium){
+                padding:rem(10px) rem(25px) rem(10px) rem(0px);
+            }
 
             &--hide{
                 display: none;
@@ -88,6 +130,22 @@
         width: calc(25%);
         position: relative;
         cursor: pointer;
+
+        @include responsive(medium){
+            
+            width: calc(25%);
+
+        }
+
+        @include responsive(small){
+            margin-bottom: rem(20px);
+            width: calc(50%);
+            
+        }
+        @include responsive(x-small){
+            width: calc(100%);
+        }
+        
        
         &-poster{
             width: 100%;
@@ -126,13 +184,15 @@
             padding: rem(6px) 0px;
             text-align: center;
             color:#878787;
-            font-size: rem(12px);
+            font-size: rem(14px);
+            letter-spacing: 1px;
+
         }
         &-rating{
             text-align: center;
             color:#878787;
-            font-size: rem(12px);
-            
+            font-size: rem(14px);
+            letter-spacing: 1px;
         }
     }
 

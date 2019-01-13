@@ -72,18 +72,29 @@ h4 {
   font-family: "Roboto", sans-serif;
   cursor: pointer;
   transition: all .4s ease-out; }
+  @media only screen and (max-width: 56.25rem) {
+    .category__button, .category__button-ticket {
+      padding: 0.9375rem 0.625rem; } }
 
 .category {
   padding: 5rem 0rem; }
+  @media only screen and (max-width: 75rem) {
+    .category {
+      padding: 1.25rem 0rem; } }
   .category__container {
     width: 1200px;
     margin: 0 auto; }
     @media only screen and (max-width: 75rem) {
       .category__container {
-        padding-left: 1.5625rem; } }
+        padding-left: 1.5625rem;
+        width: 100%; } }
     @media only screen and (max-width: 56.25rem) {
       .category__container {
-        padding-left: 1.5625rem; } }
+        padding-left: 1.5625rem;
+        width: 100%; } }
+    @media only screen and (max-width: 37.5rem) {
+      .category__container {
+        width: 100%; } }
   .category__title {
     padding: 1.25rem 0rem;
     text-transform: uppercase;
@@ -92,19 +103,36 @@ h4 {
     letter-spacing: 2px;
     font-weight: 100 !important;
     font-size: 2.8125rem; }
+    @media only screen and (max-width: 75rem) {
+      .category__title {
+        font-size: 1.875rem; } }
+    @media only screen and (max-width: 56.25rem) {
+      .category__title {
+        font-size: 1.375rem; } }
+    @media only screen and (max-width: 37.5rem) {
+      .category__title {
+        font-size: 1.375rem; } }
   .category__buttons {
     margin-top: 0.625rem 0rem; }
   .category__button {
     background: #3d4349;
     margin-right: 1.25rem; }
+    @media only screen and (max-width: 37.5rem) {
+      .category__button {
+        margin-right: 0.625rem;
+        font-size: 0.625rem; } }
     .category__button--active {
       background: red; }
     .category__button-ticket {
       width: 80%;
       margin-left: 10%;
       background: #007082; }
+      @media only screen and (max-width: 37.5rem) {
+        .category__button-ticket {
+          width: 100%;
+          margin-left: 0px; } }
   .category__movies {
-    padding: 1.25rem 0px; }
+    padding: 0.625rem 0px; }
     .category__movies::after {
       display: table;
       content: "";
@@ -113,6 +141,9 @@ h4 {
       width: 100%;
       overflow: hidden;
       padding: 2.1875rem 0rem; }
+      @media only screen and (max-width: 75rem) {
+        .category__movies-container {
+          padding: 0.625rem 1.5625rem 0.625rem 0rem; } }
       .category__movies-container--hide {
         display: none; }
   .category__movie {
@@ -120,6 +151,16 @@ h4 {
     width: calc(25%);
     position: relative;
     cursor: pointer; }
+    @media only screen and (max-width: 75rem) {
+      .category__movie {
+        width: calc(25%); } }
+    @media only screen and (max-width: 56.25rem) {
+      .category__movie {
+        margin-bottom: 1.25rem;
+        width: calc(50%); } }
+    @media only screen and (max-width: 37.5rem) {
+      .category__movie {
+        width: calc(100%); } }
     .category__movie-poster {
       width: 100%;
       transition: all .4s ease-out; }
@@ -149,11 +190,13 @@ h4 {
       padding: 0.375rem 0px;
       text-align: center;
       color: #878787;
-      font-size: 0.75rem; }
+      font-size: 0.875rem;
+      letter-spacing: 1px; }
     .category__movie-rating {
       text-align: center;
       color: #878787;
-      font-size: 0.75rem; }
+      font-size: 0.875rem;
+      letter-spacing: 1px; }
 
 .header {
   top: 0;
