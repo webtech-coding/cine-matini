@@ -16,35 +16,35 @@ class Form{
     }
 
     Event(){
-    //     //remove any error indication
-    //     this.required.forEach(required => {
-    //        required.addEventListener('change', ()=>{
-    //         console.log(required)
-    //         let cssClass=required.classList[0]+'--error'
+        //remove any error indication
+        this.required.forEach(required => {
+           required.addEventListener('change', ()=>{
+            console.log(required)
+            let cssClass=required.classList[0]+'--error'
             
-    //         if(required.classList.contains(cssClass)){
-    //             required.classList.remove(cssClass)
-    //         }
-    //        })
-    //    });
+            if(required.classList.contains(cssClass)){
+                required.classList.remove(cssClass)
+            }
+           })
+       });
 
        this.form.addEventListener('submit',(e)=>{
             
-            // e.preventDefault();
-            console.log('shovit');
-            // if(this.errors.length>0){
-            //     this.removeErrors();
-            // }
+            e.preventDefault();
 
-            // this.validationCheck()
+            if(this.errors.length>0){
+                this.removeErrors();
+            }
 
-            // if(this.errors.length>0){
-            //     this.displayErrors()
-            // }else{
+            this.validationCheck()
+
+            if(this.errors.length>0){
+                this.displayErrors()
+            }else{
                 
-            //     this.form.submit();
+                this.form.submit();
                 
-            // }
+            }
             
        })
     }

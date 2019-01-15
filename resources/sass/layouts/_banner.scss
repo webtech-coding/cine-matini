@@ -105,5 +105,34 @@
         
 
     }
+
+    &-small{
+        width: 100%;
+        margin-top: rem(80px);
+        position: relative;
+        &__image{
+            background: url('/resources/images/movie_hall.jpg');
+            height:rem(350px);
+            background-position: center;
+            background-size: cover;
+        }
+        &__text{
+            color: $color-secondary;
+            background: #fff;
+            padding:rem(10px);
+            font-family: $font-regular;
+            font-size: rem(40px);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            top:50%;
+            left:50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+
+            @include responsive(small){
+                font-size: rem(25px);
+            }
+        }
+    }
     
 }

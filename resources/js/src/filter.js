@@ -4,10 +4,16 @@ class Filter{
     constructor(){
         this.buttons=document.querySelectorAll('.category__button')
         this.movies=document.querySelectorAll('.category__movies-container')
+        this.images=document.querySelectorAll('.category__movie-poster')
+
         //show now playing movies by default 
         this.hideMovies()
+
         //Filter the movies on click
         this.filterMovies()
+
+        //redirect the page on click
+        this.redirect()
         
     }
 
@@ -51,6 +57,17 @@ class Filter{
                 movie.classList.add('category__movies-container--hide')
             }
         });
+    }
+
+    redirect(){
+        this.images.forEach(img=>{
+
+            img.addEventListener('click',()=>{
+                let id=img.getAttribute('data-movie-id')
+                window.location.href="/movie.html?id="+id;
+            })
+            
+        })
     }
 }
 

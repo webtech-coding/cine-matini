@@ -8,4 +8,5 @@ var Config = function Config() {
   this.moviedb_api_key = "220db9d772820f55fd7e39476eef1d78";
   this.moviedb_base_url = "https://api.themoviedb.org/3/movie/";
   this.moviedb_image_path = "https://image.tmdb.org/t/p/w500/";
+  this.moviedb_video_path = "http://api.themoviedb.org/3/movie/157336/videos";
 }; //var config=new Config();

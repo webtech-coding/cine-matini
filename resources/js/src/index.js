@@ -87,6 +87,7 @@ class Index extends Config{
             let img_movie=document.createElement('img')
             img_movie.setAttribute('class','category__movie-poster')
             img_movie.src=this.moviedb_image_path+movie['poster']
+            img_movie.setAttribute('data-movie-id',movie['id'])
 
             //title
             let title=document.createElement('h3')
@@ -113,7 +114,6 @@ class Index extends Config{
             div_movie.appendChild(rating)
             div_movie.appendChild(release)
             div_movie.appendChild(button)
-
             
             movies_container.appendChild(div_movie)
         })

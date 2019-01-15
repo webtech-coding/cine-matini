@@ -1,0 +1,192 @@
+%button{
+    padding:rem(15px) rem(30px);
+    color:#fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: rem(12px);
+    font-family: $font-header;
+    cursor: pointer;
+    @include transition-slow;
+
+    @include responsive(small){
+        padding:rem(15px) rem(10px);
+        
+     }
+}
+
+.movie{
+
+    margin:rem(100px) 0px;
+
+    @include responsive(small){
+        margin: rem(50px) 0px;
+    }
+
+    
+    &__container{
+        width:1200px;
+        margin: 0 auto;
+       
+
+        @include responsive(medium){
+            width: 100%;
+            padding-left: rem(25px);
+           padding-right: rem(25px);
+            
+        }
+       
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive(small){
+            flex-direction: column;
+        }
+       
+    }
+
+    &__description{
+        
+       text-align: left;
+
+       @include responsive(small){
+       text-align: center;
+    }
+        
+    }
+
+    &__title{
+        font-size: rem(30px);
+        text-transform: uppercase;
+        color: $color-secondary;
+        letter-spacing: 1px;
+        padding:rem(10px) 0px;
+
+        @include responsive(x-small){
+            font-size: rem(20px);
+          
+        }
+    }
+    &__release-date{
+        margin-top: rem(20px);
+        font-size: rem(16px);
+        color:$color-secondary;
+        
+    }
+    &__genre{
+        margin-top: rem(2px);
+
+        &-type{
+            background: red;
+            color: #fff;
+            padding:rem(5px);
+            font-size: rem(10px);
+            letter-spacing: 1px;
+            border-radius: rem(5px);
+
+            &:not(:last-child){
+                margin-right: rem(8px);
+                
+            }
+        }
+    }
+
+    &__poster{
+       // flex: 1;
+        position: relative;
+       
+        &-icon{
+            position: absolute;
+            top:50%;
+            left:50%;
+            z-index: 100;
+            color:#fff;
+            font-size: rem(50px);
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+        }
+        &-img{
+            @include responsive(small){
+                margin-top: rem(20px);
+               width: 100%;
+              
+            }
+        }
+    }
+
+    &__language{
+        margin: rem(5px) 0px;
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-top: rem(50px);
+        align-items: center;
+
+        @include responsive(small){
+            flex-direction: column;
+          
+        }
+
+    }
+
+    &__carousel{
+        padding-right: rem(10px);
+        text-align: left;
+        width: 50%;
+        
+
+        @include responsive(small){
+            width: 100%;
+            padding-right: rem(0px);
+          
+        }
+
+        &-img{
+            display: block;
+            
+            @include responsive(small){
+                width: 100%;
+              
+            }
+        }
+    }
+
+    &__overview{
+        color:$color-secondary;
+        padding:rem(20px) 0px;
+        @include responsive(small){
+            padding-bottom:rem(10px);
+            font-size: rem(18px);
+          
+        }
+    }
+
+    &__text{
+        text-align: left;
+        width: 50%;
+        letter-spacing: 1px;
+        @include responsive(small){
+            width: 100%;
+          
+        }
+       
+    }
+
+    &__more{
+        text-align: center;
+        margin-bottom: rem(50px);
+       
+    }
+
+    &__button-ticket{
+        background: $color-secondary;
+        @extend %button;
+        margin-top: rem(20px);
+        font-weight: 100;
+        
+    }
+}

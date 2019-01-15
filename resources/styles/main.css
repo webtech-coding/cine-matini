@@ -63,7 +63,7 @@ h4 {
   font-size: 1.125rem;
   line-height: 1; }
 
-.category__button, .category__button-ticket {
+.category__button, .category__button-ticket, .movie__button-ticket {
   padding: 0.9375rem;
   color: #fff;
   letter-spacing: 1px;
@@ -73,7 +73,7 @@ h4 {
   cursor: pointer;
   transition: all .4s ease-out; }
   @media only screen and (max-width: 56.25rem) {
-    .category__button, .category__button-ticket {
+    .category__button, .category__button-ticket, .movie__button-ticket {
       padding: 0.9375rem 0.625rem; } }
 
 .category {
@@ -287,6 +287,25 @@ h4 {
     letter-spacing: 1px;
     cursor: pointer; }
 
+.scroll {
+  position: fixed;
+  right: 5%;
+  bottom: -10%;
+  z-index: 200;
+  background: red;
+  color: red;
+  height: 3.125rem;
+  width: 3.125rem;
+  transition: all .4s ease-out;
+  cursor: pointer; }
+  .scroll--open {
+    bottom: 1%; }
+  .scroll__icon {
+    margin-top: 17px;
+    margin-left: 17px;
+    color: #fff;
+    transform: rotate(-90deg); }
+
 .header {
   top: 0;
   background: #fff;
@@ -334,7 +353,7 @@ h4 {
     font-family: "Roboto", sans-serif;
     cursor: pointer; }
     .header__desktop-item:hover {
-      border-bottom: 3px solid #007082; }
+      color: #007082; }
   .header__mobile-nav {
     display: none;
     text-align: right; }
@@ -472,6 +491,30 @@ h4 {
     display: block;
     width: 100%;
     position: relative; }
+  .banner-small {
+    width: 100%;
+    margin-top: 5rem;
+    position: relative; }
+    .banner-small__image {
+      background: url("/resources/images/movie_hall.jpg");
+      height: 21.875rem;
+      background-position: center;
+      background-size: cover; }
+    .banner-small__text {
+      color: #007082;
+      background: #fff;
+      padding: 0.625rem;
+      font-family: "Abril Fatface", cursive;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%); }
+      @media only screen and (max-width: 56.25rem) {
+        .banner-small__text {
+          font-size: 1.5625rem; } }
 
 .footer {
   height: 50px;
@@ -489,6 +532,127 @@ h4 {
     @media only screen and (max-width: 75rem) {
       .footer__container {
         width: 100%; } }
+
+.category__button, .category__button-ticket, .movie__button-ticket {
+  padding: 0.9375rem 1.875rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  transition: all .4s ease-out; }
+  @media only screen and (max-width: 56.25rem) {
+    .category__button, .category__button-ticket, .movie__button-ticket {
+      padding: 0.9375rem 0.625rem; } }
+
+.movie {
+  margin: 6.25rem 0px; }
+  @media only screen and (max-width: 56.25rem) {
+    .movie {
+      margin: 3.125rem 0px; } }
+  .movie__container {
+    width: 1200px;
+    margin: 0 auto; }
+    @media only screen and (max-width: 75rem) {
+      .movie__container {
+        width: 100%;
+        padding-left: 1.5625rem;
+        padding-right: 1.5625rem; } }
+  .movie__top {
+    display: flex;
+    justify-content: space-between; }
+    @media only screen and (max-width: 56.25rem) {
+      .movie__top {
+        flex-direction: column; } }
+  .movie__description {
+    text-align: left; }
+    @media only screen and (max-width: 56.25rem) {
+      .movie__description {
+        text-align: center; } }
+  .movie__title {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    color: #007082;
+    letter-spacing: 1px;
+    padding: 0.625rem 0px; }
+    @media only screen and (max-width: 37.5rem) {
+      .movie__title {
+        font-size: 1.25rem; } }
+  .movie__release-date {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    color: #007082; }
+  .movie__genre {
+    margin-top: 0.125rem; }
+    .movie__genre-type {
+      background: red;
+      color: #fff;
+      padding: 0.3125rem;
+      font-size: 0.625rem;
+      letter-spacing: 1px;
+      border-radius: 0.3125rem; }
+      .movie__genre-type:not(:last-child) {
+        margin-right: 0.5rem; }
+  .movie__poster {
+    position: relative; }
+    .movie__poster-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 100;
+      color: #fff;
+      font-size: 3.125rem;
+      transform: translate(-50%, -50%);
+      cursor: pointer; }
+    @media only screen and (max-width: 56.25rem) {
+      .movie__poster-img {
+        margin-top: 1.25rem;
+        width: 100%; } }
+  .movie__language {
+    margin: 0.3125rem 0px; }
+  .movie__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.125rem;
+    align-items: center; }
+    @media only screen and (max-width: 56.25rem) {
+      .movie__bottom {
+        flex-direction: column; } }
+  .movie__carousel {
+    padding-right: 0.625rem;
+    text-align: left;
+    width: 50%; }
+    @media only screen and (max-width: 56.25rem) {
+      .movie__carousel {
+        width: 100%;
+        padding-right: 0rem; } }
+    .movie__carousel-img {
+      display: block; }
+      @media only screen and (max-width: 56.25rem) {
+        .movie__carousel-img {
+          width: 100%; } }
+  .movie__overview {
+    color: #007082;
+    padding: 1.25rem 0px; }
+    @media only screen and (max-width: 56.25rem) {
+      .movie__overview {
+        padding-bottom: 0.625rem;
+        font-size: 1.125rem; } }
+  .movie__text {
+    text-align: left;
+    width: 50%;
+    letter-spacing: 1px; }
+    @media only screen and (max-width: 56.25rem) {
+      .movie__text {
+        width: 100%; } }
+  .movie__more {
+    text-align: center;
+    margin-bottom: 3.125rem; }
+  .movie__button-ticket {
+    background: #007082;
+    margin-top: 1.25rem;
+    font-weight: 100; }
 
 /* Slider */
 .slick-slider {

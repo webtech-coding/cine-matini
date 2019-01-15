@@ -19,12 +19,12 @@
             </div>
             <nav class="header__desktop-nav">
                 <ul class="header__desktop-items">
-                    <li class="header__desktop-item">Home</li>
-                    <li class="header__desktop-item">Showing</li>
-                    <li class="header__desktop-item">Up Coming</li>
-                    <li class="header__desktop-item">History</li>
-                    <li class="header__desktop-item">Food Courts</li>
-                    <li class="header__desktop-item">Contact</li>
+                    <a href="/"><li class="header__desktop-item">Home</li></a>
+                    <a href="showing.html"><li class="header__desktop-item">Showing</li></a>
+                    <a href="upcominh.html"><li class="header__desktop-item">Up Coming</li></a>
+                    <a href="upcominh.html"></a><li class="header__desktop-item">History</li></a>
+                    <a href="foodcourts.html"><li class="header__desktop-item">Food Courts</li></a>
+                    <a href="contact.html"><li class="header__desktop-item">Contact</li></a>
                 </ul>
             </nav>
     
@@ -142,7 +142,7 @@
         </div>
     </section>
 
-    <section class="footer">
+    <footer class="footer">
        <div class="footer__container">
            <div class="footer__left">
                 <span class="fas fa-phone"><span> Call us directly (+358) 012341985
@@ -151,13 +151,19 @@
                 <span class="fas fa-envelope"></span> Send us an email : cine-matini@gmail.com
            </div>
        </div>
-    </section>
+    </footer>
+
+    <div class="scroll">
+        <span class="fas fa-arrow-right scroll__icon"></span>
+    </div>
     
     <script src="resources/js/scripts/config.js"></script>
     <script src="resources/js/scripts/index.js"></script>
     <script src="resources/js/scripts/navigation.js"></script>
     <script src="resources/js/scripts/filter.js"></script>
     <script src="resources/js/scripts/form.js"></script>
+    <script src="resources/js/scripts/parallex.js"></script>
+    <script src="resources/js/scripts/scrolltop.js"></script>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -166,6 +172,10 @@
     <script>
         new Form('.subscribe__form')
     </script>
+    <script>
+        new Parallax('.widget__image')
+    </script>
+   
 
     <script>
         $(document).ready(function(){

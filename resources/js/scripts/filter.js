@@ -13,11 +13,14 @@ function () {
     _classCallCheck(this, Filter);
 
     this.buttons = document.querySelectorAll('.category__button');
-    this.movies = document.querySelectorAll('.category__movies-container'); //show now playing movies by default 
+    this.movies = document.querySelectorAll('.category__movies-container');
+    this.images = document.querySelectorAll('.category__movie-poster'); //show now playing movies by default 
 
     this.hideMovies(); //Filter the movies on click
 
-    this.filterMovies();
+    this.filterMovies(); //redirect the page on click
+
+    this.redirect();
   }
 
   _createClass(Filter, [{
@@ -65,6 +68,16 @@ function () {
         if (category !== 'now_playing') {
           movie.classList.add('category__movies-container--hide');
         }
+      });
+    }
+  }, {
+    key: "redirect",
+    value: function redirect() {
+      this.images.forEach(function (img) {
+        img.addEventListener('click', function () {
+          var id = img.getAttribute('data-movie-id');
+          window.location.href = "/movie.html?id=" + id;
+        });
       });
     }
   }]);

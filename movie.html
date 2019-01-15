@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CINE MATINI</title>
+    <link rel="stylesheet" href="resources/styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto|Spicy+Rice" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="icon" href="resources/images/logo-01.png" type="image/x-icon"/>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+               <img src="resources/images/logo-01.png" class="header__logo-img">
+            </div>
+            <nav class="header__desktop-nav">
+                <ul class="header__desktop-items">
+                    <a href="/"><li class="header__desktop-item">Home</li></a>
+                    <a href="showing.html"><li class="header__desktop-item">Showing</li></a>
+                    <a href="upcominh.html"><li class="header__desktop-item">Up Coming</li></a>
+                    <a href="upcominh.html"></a><li class="header__desktop-item">History</li></a>
+                    <a href="foodcourts.html"><li class="header__desktop-item">Food Courts</li></a>
+                    <a href="contact.html"><li class="header__desktop-item">Contact</li></a>
+                </ul>
+            </nav>
+    
+            <nav class="header__mobile-nav">              
+                <div class="header__mobile-hesburger">
+                    <div class="header__mobile-line"></div>
+                    <div class="header__mobile-line"></div>
+                    <div class="header__mobile-line"></div>
+                </div>
+                <ul class="header__mobile-items">
+                    <li class="header__mobile-item">Home</li>
+                    <li class="header__mobile-item">Showing</li>
+                    <li class="header__mobile-item">Up Coming</li>
+                    <li class="header__mobile-item">History</li>
+                    <li class="header__mobile-item">Food Courts</li>
+                    <li class="header__mobile-item">Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner-small">
+        <div class="banner-small__image">
+           <h2 class="banner-small__text">
+               Cine-Matini
+           </h2>
+        </div>
+    </section>
+
+    <section class="movie">
+        <div class="movie__container">
+            <div class="movie__top">
+                <div class="movie__description">
+                    <h1 class="movie__title">movie Title</h1>
+                    <div class="movie__genre">
+                    </div>
+                    <p class="movie__release-date">release date : 27-08-1955</p>
+                    
+                    <div class="movie__language">
+                        Languages : 
+                    </div>
+                        
+                    <div class="movie__rating">
+                            IMDB rating : 7.5 /10
+                    </div>
+                </div>
+                <div class="movie__poster">
+                    <span class="far fa-play-circle movie__poster-icon"></span>
+                </div>
+            </div>
+            <div class="movie__bottom">
+                <div class="movie__carousel">
+                    
+                </div>
+                <div class="movie__text">
+                    <h2 class="movie__overview">Overview</h2>
+                    <p class="movie__text-description"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="movie__more">
+        <button class="movie__button-ticket" data-id="upcoming">View All</button>
+    </section>
+
+    <div class="scroll">
+        <span class="fas fa-arrow-right scroll__icon"></span>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__left">
+                 <span class="fas fa-phone"><span> Call us directly (+358) 012341985
+            </div>
+            <div class="footer__right">
+                 <span class="fas fa-envelope"></span> Send us an email : cine-matini@gmail.com
+            </div>
+        </div>
+     </footer>
+
+    <script src="resources/js/scripts/config.js"></script>
+    <script src="resources/js/scripts/navigation.js"></script>
+    <script src="resources/js/scripts/scrolltop.js"></script>
+    <script src="resources/js/scripts/movie.js"></script>
+
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="resources/js/scripts/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.movie__carousel').slick({
+                autoplay:true,
+                infinite:true,
+                fade:false,
+                autoplaySpeed:3000,
+                useTransform: false,
+                prevArrow:$('.banner__prev'),
+                nextArrow:$('.banner__next'),
+                pauseOnFocus:false
+            });
+        });
+    </script>
+
+</body>
+</html>

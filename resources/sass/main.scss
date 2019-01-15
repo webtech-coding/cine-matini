@@ -14,13 +14,15 @@
 @import 'components/category.scss';
 @import 'components/widget.scss';
 @import 'components/subscribe.scss';
+@import 'components/scroll.scss';
 
 //Layouts//
 @import 'layouts/navigation.scss';
 @import 'layouts/banner.scss';
 @import 'layouts/footer.scss';
-//Pages//
 
+//Pages//
+@import 'pages/movie.scss';
 
 //Vendors//
 @import 'vendor/slick.scss'
