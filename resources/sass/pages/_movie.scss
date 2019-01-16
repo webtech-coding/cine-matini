@@ -189,4 +189,52 @@
         font-weight: 100;
         
     }
+
+    &__overlay{
+        position: fixed;
+        z-index: 1000;
+        height: 100%;
+        width:100%;
+        top: 0%;
+        left:0%;
+        background: rgba(0,0,0,.8);
+        display: none;
+
+        iframe{
+            height: rem(500px);
+            width: rem(700px);
+        }
+
+
+
+        &--open{
+            display: block;
+        }
+    }
+
+    &__iframe{
+       position: absolute;
+       left:50%;
+       top: 50%;
+       transform: translate(-50%,-50%);
+
+       &-close{
+        position: absolute;
+        right:5%;
+        top:5%;
+        color:rgb(130, 130, 130);
+        font-size: rem(25px);
+        height: rem(50px);
+        width: rem(50px);
+        border:2px solid rgba(235, 235, 235, 0.5);
+        border-radius: 50%;
+        padding-top: 10px;
+        padding-left:14px;
+        cursor: pointer;
+       
+        
+    }
+    }
+
+    
 }

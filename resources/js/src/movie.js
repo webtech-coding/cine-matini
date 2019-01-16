@@ -15,15 +15,19 @@ class Movie extends Config{
         this.carousel=document.querySelector('.movie__carousel')
         this.movie_text=document.querySelector('.movie__text-description')
         this.movie_video=document.querySelector('.movie__poster-icon')
-
+        this.movie_overlay=document.querySelector('.movie__overlay')
+        this.movie_iframe=document.querySelector('.movie__iframe')
         this.video_id=null
 
+        this.iframe_close=document.querySelector('.movie__iframe-close')
 
-      this.movie_id=this.getUrlVars()
+        this.movie_id=this.getUrlVars()
 
-      this.getMovie()
-      this.getImages()
-      this.getVideo()
+        this.getMovie()
+        this.getImages()
+        //this.getVideo()
+        this.playVideo()
+        this.closeIframe()
 
     }
 
@@ -141,25 +145,54 @@ class Movie extends Config{
         });
     }
 
-    getVideo(){
+    getVideo(movie_id){
         
-        fetch(this.moviedb_base_url+this.movie_id+'/videos?api_key='+this.moviedb_api_key,
+        fetch(this.moviedb_base_url+movie_id+'/videos?api_key='+this.moviedb_api_key,
         {method:"GET"})
         .then(response=>{
             return response.json()
         })
         .then(data=>{
-            this.fetchVideos(data)
+           this.fetchVideos(data)
+            
         }).catch(error=>{
-            console.log()
+            console.log(error)
         })
        
     }
 
     fetchVideos(data){
-        this.video_id=data['results'][0]['key']
+
+        const embed='https://www.youtube.com/embed/'
         
+
+        this.video_id=data['results'][0]['key']
+
+        this.movie_iframe.setAttribute('src',embed+this.video_id+'?autoplay=1')
+        this.movie_overlay.classList.add('movie__overlay--open')
+      
     }
+
+    playVideo(){
+        this.movie_video.addEventListener('click',()=>{
+            let data_id=this.movie_video.getAttribute('data-id')
+            let youtube_id=this.getVideo(data_id)
+        })
+
+        window.addEventListener('click',(e)=>{
+            console.log(e.target)
+        })
+    }
+
+    closeIframe(){
+        this.iframe_close.addEventListener('click',()=>{
+            if(this.movie_overlay.classList.contains('movie__overlay--open')){
+                this.movie_overlay.classList.remove('movie__overlay--open')
+            }
+        })
+    }
+
+  
 }
 
     new Movie();
