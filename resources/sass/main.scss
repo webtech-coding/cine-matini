@@ -15,6 +15,7 @@
 @import 'components/widget.scss';
 @import 'components/subscribe.scss';
 @import 'components/scroll.scss';
+@import 'components/movie_block.scss';
 
 //Layouts//
 @import 'layouts/navigation.scss';
@@ -23,6 +24,7 @@
 
 //Pages//
 @import 'pages/movie.scss';
+@import 'pages/showing.scss';
 
 //Vendors//
 @import 'vendor/slick.scss'

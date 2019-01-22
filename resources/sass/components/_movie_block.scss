@@ -1,0 +1,18 @@
+.showing{
+    margin: rem(50px) 0px;
+    &__movie{
+        display: flex;
+        margin: rem(50px) 0px;
+    }
+
+    &__poster{
+        width: 50%;
+        height: 50%;
+        overflow: hidden;
+    }
+
+    &__description{
+        width: 50%;
+        
+    }
+}

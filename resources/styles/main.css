@@ -306,6 +306,18 @@ h4 {
     color: #fff;
     transform: rotate(-90deg); }
 
+.showing {
+  margin: 3.125rem 0px; }
+  .showing__movie {
+    display: flex;
+    margin: 3.125rem 0px; }
+  .showing__poster {
+    width: 50%;
+    height: 50%;
+    overflow: hidden; }
+  .showing__description {
+    width: 50%; }
+
 .header {
   top: 0;
   background: #fff;
@@ -685,6 +697,15 @@ h4 {
       padding-top: 10px;
       padding-left: 14px;
       cursor: pointer; }
+
+.showing__container {
+  width: 800px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 56.25rem) {
+    .showing__container {
+      width: 100%;
+      padding-left: 1.5625rem;
+      padding-right: 1.5625rem; } }
 
 /* Slider */
 .slick-slider {

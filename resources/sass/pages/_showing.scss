@@ -1,0 +1,14 @@
+.showing{
+    &__container{
+        width:800px;
+        margin: 0 auto;
+        
+       
+        @include responsive(small){
+            width: 100%;
+            padding-left: rem(25px);
+           padding-right: rem(25px);
+            
+        }
+    }
+}
