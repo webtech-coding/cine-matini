@@ -63,7 +63,7 @@ h4 {
   font-size: 1.125rem;
   line-height: 1; }
 
-.category__button, .category__button-ticket, .movie__button-ticket {
+.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
   padding: 0.9375rem;
   color: #fff;
   letter-spacing: 1px;
@@ -73,7 +73,7 @@ h4 {
   cursor: pointer;
   transition: all .4s ease-out; }
   @media only screen and (max-width: 56.25rem) {
-    .category__button, .category__button-ticket, .movie__button-ticket {
+    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
       padding: 0.9375rem 0.625rem; } }
 
 .category {
@@ -306,6 +306,19 @@ h4 {
     color: #fff;
     transform: rotate(-90deg); }
 
+.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
+  padding: 0.9375rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  transition: all .4s ease-out; }
+  @media only screen and (max-width: 56.25rem) {
+    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
+      padding: 0.9375rem 0.625rem; } }
+
 .showing {
   margin: 3.125rem 0px; }
   .showing__movie {
@@ -317,6 +330,22 @@ h4 {
     overflow: hidden; }
   .showing__description {
     width: 50%; }
+  .showing__title {
+    color: #007082;
+    font-size: 2.1875rem; }
+  .showing__release-date {
+    padding: 0.3125rem 0px;
+    color: #007082; }
+  .showing__language {
+    padding: 0.3125rem 0px; }
+  .showing__ticket {
+    width: 80%;
+    margin-top: 0.625rem;
+    background: #007082; }
+    @media only screen and (max-width: 37.5rem) {
+      .showing__ticket {
+        width: 100%;
+        margin-left: 0px; } }
 
 .header {
   top: 0;
@@ -545,7 +574,7 @@ h4 {
       .footer__container {
         width: 100%; } }
 
-.category__button, .category__button-ticket, .movie__button-ticket {
+.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
   padding: 0.9375rem 1.875rem;
   color: #fff;
   letter-spacing: 1px;
@@ -555,7 +584,7 @@ h4 {
   cursor: pointer;
   transition: all .4s ease-out; }
   @media only screen and (max-width: 56.25rem) {
-    .category__button, .category__button-ticket, .movie__button-ticket {
+    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
       padding: 0.9375rem 0.625rem; } }
 
 .movie {

@@ -1,3 +1,20 @@
+
+%button{
+    padding:rem(15px);
+    color:#fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: rem(12px);
+    font-family: $font-header;
+    cursor: pointer;
+    @include transition-slow;
+
+    @include responsive(small){
+        padding:rem(15px) rem(10px);
+        
+     }
+}
+
 .showing{
     margin: rem(50px) 0px;
     &__movie{
@@ -14,5 +31,33 @@
     &__description{
         width: 50%;
         
+    }
+
+    &__title{
+        color: $color-secondary;
+        font-size: rem(35px);
+    }
+
+    &__release-date{
+        padding: rem(5px) 0px;
+        color: $color-secondary;
+    }
+
+    &__language{
+        padding: rem(5px) 0px;
+    }
+
+    &__ticket{
+        @extend %button;
+        width: 80%;
+        margin-top: rem(10px);
+        @extend %button;
+        background: $color-secondary;
+
+        @include responsive(x-small){
+            width: 100%;
+            margin-left: 0px;
+            
+        }
     }
 }

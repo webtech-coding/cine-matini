@@ -56,6 +56,7 @@ function (_Config) {
       var _this3 = this;
 
       movies.forEach(function (movie) {
+        console.log(movie);
         var poster = document.createElement('img');
         poster.setAttribute('class', 'showing__poster');
         poster.setAttribute('src', _this3.moviedb_image_path + movie['backdrop_path']);
@@ -68,21 +69,46 @@ function (_Config) {
         title.textContent = movie['title'];
         var date = document.createElement('p');
         date.setAttribute('class', 'showing__release-date');
-        date.textContent = 'Release date :' + movie['release_date'];
+        date.textContent = 'Release date : ' + movie['release_date'];
         var language = document.createElement('div');
         language.setAttribute('class', 'showing__language');
-        language.textContent = 'Langauga :' + movie['original_language'];
+        language.textContent = 'Langauga : ' + movie['original_language'];
         var rating = document.createElement('div');
         rating.setAttribute('class', 'showing__language');
-        rating.textContent = 'IMDB rating :' + movie['vote_average'];
+        rating.textContent = 'IMDB rating : ' + movie['vote_average']; //button
+
+        var more = document.createElement('button');
+        more.setAttribute('class', 'showing__ticket showing__view-more');
+        more.setAttribute('data-id', movie['id']);
+        more.textContent = 'View more'; //button
+
+        var ticket = document.createElement('button');
+        ticket.setAttribute('class', 'showing__ticket showing__buy-ticket');
+        ticket.setAttribute('data-id', movie['id']);
+        ticket.textContent = 'Ticket';
         description.appendChild(title);
         description.appendChild(date);
         description.appendChild(language);
         description.appendChild(rating);
+        description.appendChild(more);
+        description.appendChild(ticket);
         showing_movie.appendChild(description);
         showing_movie.appendChild(poster);
 
         _this3.showing_container.appendChild(showing_movie);
+
+        _this3.getButtons();
+      });
+    }
+  }, {
+    key: "getButtons",
+    value: function getButtons() {
+      this.showMore = document.querySelectorAll('.showing__view-more');
+      this.showMore.forEach(function (movie) {
+        movie.addEventListener('click', function () {
+          var id = movie.getAttribute('data-id');
+          window.location.href = "/movie.html?id=" + id;
+        });
       });
     }
   }]);
