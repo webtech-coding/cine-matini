@@ -75,7 +75,6 @@
             @include responsive(x-small){
                 font-size: rem(20px);
             }
-           
         }
         &-subheader{
            color: $color-secondary;

@@ -11,8 +11,9 @@
 
     @include responsive(small){
         padding:rem(15px) rem(10px);
+        width: 100%;
         
-     }
+    }
 }
 
 .showing{
@@ -20,16 +21,40 @@
     &__movie{
         display: flex;
         margin: rem(50px) 0px;
+
+        @include responsive(small){
+            width: 100%;
+            display: flex;
+         
+            flex-direction: column-reverse
+            
+
+        }
+
+        
     }
 
     &__poster{
         width: 50%;
         height: 50%;
         overflow: hidden;
+        
+
+        @include responsive(small){
+            width: 100%;
+            
+
+        }
     }
 
     &__description{
         width: 50%;
+        
+        @include responsive(small){
+            width: 100%;
+            text-align-last: center;
+            margin-top: rem(10px);
+        }
         
     }
 
@@ -53,6 +78,12 @@
         margin-top: rem(10px);
         @extend %button;
         background: $color-secondary;
+
+        @include responsive(small){
+            padding:rem(15px) rem(10px);
+            width: 100%;
+            
+        }
 
         @include responsive(x-small){
             width: 100%;

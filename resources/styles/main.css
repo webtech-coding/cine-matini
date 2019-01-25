@@ -317,19 +317,33 @@ h4 {
   transition: all .4s ease-out; }
   @media only screen and (max-width: 56.25rem) {
     .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
-      padding: 0.9375rem 0.625rem; } }
+      padding: 0.9375rem 0.625rem;
+      width: 100%; } }
 
 .showing {
   margin: 3.125rem 0px; }
   .showing__movie {
     display: flex;
     margin: 3.125rem 0px; }
+    @media only screen and (max-width: 56.25rem) {
+      .showing__movie {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse; } }
   .showing__poster {
     width: 50%;
     height: 50%;
     overflow: hidden; }
+    @media only screen and (max-width: 56.25rem) {
+      .showing__poster {
+        width: 100%; } }
   .showing__description {
     width: 50%; }
+    @media only screen and (max-width: 56.25rem) {
+      .showing__description {
+        width: 100%;
+        text-align-last: center;
+        margin-top: 0.625rem; } }
   .showing__title {
     color: #007082;
     font-size: 2.1875rem; }
@@ -342,6 +356,10 @@ h4 {
     width: 80%;
     margin-top: 0.625rem;
     background: #007082; }
+    @media only screen and (max-width: 56.25rem) {
+      .showing__ticket {
+        padding: 0.9375rem 0.625rem;
+        width: 100%; } }
     @media only screen and (max-width: 37.5rem) {
       .showing__ticket {
         width: 100%;
@@ -735,6 +753,65 @@ h4 {
       width: 100%;
       padding-left: 1.5625rem;
       padding-right: 1.5625rem; } }
+
+.foodcourt {
+  margin: 6.25rem 0px; }
+  .foodcourt__container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex; }
+    @media only screen and (max-width: 75rem) {
+      .foodcourt__container {
+        padding-left: 1.5625rem;
+        padding-right: 1.5625rem;
+        width: 100%;
+        flex-direction: column;
+        margin: 0.625rem 0px; } }
+    @media only screen and (max-width: 56.25rem) {
+      .foodcourt__container {
+        padding-left: 1.5625rem;
+        width: 100%; } }
+    @media only screen and (max-width: 37.5rem) {
+      .foodcourt__container {
+        width: 100%; } }
+  .foodcourt__description {
+    width: 50%;
+    padding-left: 1.25rem;
+    color: #5a5a5a;
+    flex-direction: column; }
+    @media only screen and (max-width: 75rem) {
+      .foodcourt__description {
+        margin-top: 1.25rem;
+        width: 100%; } }
+  .foodcourt__title {
+    color: #007082; }
+    .foodcourt__title-sub {
+      margin: 1.25rem 0px;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #5a5a5a; }
+  .foodcourt__lists {
+    margin: 1.25rem 0px; }
+  .foodcourt__list {
+    margin: 0.3125rem 0px;
+    color: #5a5a5a; }
+    .foodcourt__list-icon {
+      display: inline-block;
+      transform: rotate(90deg);
+      margin-right: 0.625rem;
+      color: #007082; }
+  .foodcourt__monolog {
+    line-height: 1.25rem; }
+  .foodcourt__image {
+    width: 50%;
+    overflow: hidden; }
+    @media only screen and (max-width: 75rem) {
+      .foodcourt__image {
+        width: 100%; } }
+  .foodcourt__img {
+    width: 100%; }
 
 /* Slider */
 .slick-slider {

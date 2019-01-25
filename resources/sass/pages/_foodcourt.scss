@@ -1,0 +1,89 @@
+.foodcourt{
+    margin: rem(100px) 0px;
+    &__container{
+        width:1200px;
+        margin: 0 auto;
+        display: flex;
+    
+        @include responsive(medium){
+            padding-left: rem(25px);
+            padding-right: rem(25px);
+            width: 100%;
+            flex-direction: column;
+            margin: rem(10px) 0px;
+        }
+        @include responsive(small){
+           padding-left: rem(25px);
+           width: 100%;
+           
+           
+        }
+        @include responsive(x-small){
+           
+            width: 100%;
+            
+        }
+    }
+
+    &__description{
+        width: 50%;
+        padding-left: rem(20px);
+        color: #5a5a5a;
+         flex-direction: column;
+
+         @include responsive(medium){
+            margin-top: rem(20px);
+            width: 100%;
+            
+            
+        }
+    }
+
+    &__title{
+        color:$color-secondary;
+        &-sub{
+            margin: rem(20px) 0px;
+            font-size: rem(14px);
+            line-height: rem(20px);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #5a5a5a;
+        }
+    }
+
+    &__lists{
+        margin: rem(20px) 0px;
+    }
+
+    &__list{
+        margin: rem(5px) 0px;
+        color: #5a5a5a;
+        
+        &-icon{
+            display: inline-block;
+            transform: rotate(90deg);
+            margin-right: rem(10px);
+            color:$color-secondary;
+        }
+    }
+
+    &__monolog{
+        line-height: rem(20px);
+    }
+
+    &__image{
+        width: 50%;
+        overflow: hidden;
+        @include responsive(medium){
+           
+            width: 100%;
+            
+            
+        }
+
+    }
+
+    &__img{
+        width: 100%;
+    }
+}
