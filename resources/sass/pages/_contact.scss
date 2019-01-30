@@ -1,0 +1,108 @@
+
+
+%button{
+    padding:rem(15px) rem(25px);
+    color:#fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: rem(12px);
+    font-family: $font-header;
+    cursor: pointer;
+    @include transition-slow;
+
+    @include responsive(small){
+        padding:rem(15px) rem(10px);
+        
+     }
+}
+
+.contact{
+    margin: rem(100px) 0px;
+    &__container{
+        width:1200px;
+        margin: 0 auto;
+       
+    
+        @include responsive(medium){
+            padding-left: rem(25px);
+            padding-right: rem(25px);
+            width: 100%;
+            margin: rem(10px) 0px;
+        }
+        @include responsive(small){
+           padding-left: rem(25px);
+           width: 100%;
+           
+        }
+        @include responsive(x-small){
+           
+            width: 100%;
+            
+        }
+    }
+
+    &__row{
+        margin: rem(20px) 0px;
+
+    }
+
+    &__label{
+        text-transform: uppercase;
+        font-size: rem(12px);
+        letter-spacing: 1px;
+        color: #5a5a5a;
+        margin-bottom: rem(5px);
+    }
+
+    &__input-field{
+        border:1px solid #cecece;
+        height: rem(30px);
+        width: 50%;
+        outline: none;
+
+        @include responsive(small){
+            width:100%;
+        }
+    }
+
+    &__textarea{
+        width: 50%;
+        border:1px solid #cecece;
+
+        @include responsive(small){
+            width:100%;
+        }
+    }
+
+    &__button{
+        background:#3d4349;
+        margin-right: rem(20px);
+        outline: none;
+
+        @include responsive(x-small){
+            
+            margin-right: rem(10px);
+            font-size: rem(10px);
+            
+        }
+        @extend %button;
+
+        &--active{
+            background: red;
+        }
+
+        &-ticket{
+            width: 80%;
+            margin-left: 10%;
+            @extend %button;
+            background: $color-secondary;
+
+            @include responsive(x-small){
+                width: 100%;
+                margin-left: 0px;
+                
+            }
+           
+        }
+    }
+}

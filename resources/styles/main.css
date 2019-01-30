@@ -63,7 +63,7 @@ h4 {
   font-size: 1.125rem;
   line-height: 1; }
 
-.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
+.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket, .contact__button, .contact__button-ticket {
   padding: 0.9375rem;
   color: #fff;
   letter-spacing: 1px;
@@ -73,7 +73,7 @@ h4 {
   cursor: pointer;
   transition: all .4s ease-out; }
   @media only screen and (max-width: 56.25rem) {
-    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
+    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket, .contact__button, .contact__button-ticket {
       padding: 0.9375rem 0.625rem; } }
 
 .category {
@@ -306,7 +306,7 @@ h4 {
     color: #fff;
     transform: rotate(-90deg); }
 
-.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
+.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket, .contact__button, .contact__button-ticket {
   padding: 0.9375rem;
   color: #fff;
   letter-spacing: 1px;
@@ -316,7 +316,7 @@ h4 {
   cursor: pointer;
   transition: all .4s ease-out; }
   @media only screen and (max-width: 56.25rem) {
-    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
+    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket, .contact__button, .contact__button-ticket {
       padding: 0.9375rem 0.625rem;
       width: 100%; } }
 
@@ -592,7 +592,7 @@ h4 {
       .footer__container {
         width: 100%; } }
 
-.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
+.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket, .contact__button, .contact__button-ticket {
   padding: 0.9375rem 1.875rem;
   color: #fff;
   letter-spacing: 1px;
@@ -602,7 +602,7 @@ h4 {
   cursor: pointer;
   transition: all .4s ease-out; }
   @media only screen and (max-width: 56.25rem) {
-    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket {
+    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket, .contact__button, .contact__button-ticket {
       padding: 0.9375rem 0.625rem; } }
 
 .movie {
@@ -812,6 +812,78 @@ h4 {
         width: 100%; } }
   .foodcourt__img {
     width: 100%; }
+
+.category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket, .contact__button, .contact__button-ticket {
+  padding: 0.9375rem 1.5625rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  transition: all .4s ease-out; }
+  @media only screen and (max-width: 56.25rem) {
+    .category__button, .category__button-ticket, .showing__ticket, .movie__button-ticket, .contact__button, .contact__button-ticket {
+      padding: 0.9375rem 0.625rem; } }
+
+.contact {
+  margin: 6.25rem 0px; }
+  .contact__container {
+    width: 1200px;
+    margin: 0 auto; }
+    @media only screen and (max-width: 75rem) {
+      .contact__container {
+        padding-left: 1.5625rem;
+        padding-right: 1.5625rem;
+        width: 100%;
+        margin: 0.625rem 0px; } }
+    @media only screen and (max-width: 56.25rem) {
+      .contact__container {
+        padding-left: 1.5625rem;
+        width: 100%; } }
+    @media only screen and (max-width: 37.5rem) {
+      .contact__container {
+        width: 100%; } }
+  .contact__row {
+    margin: 1.25rem 0px; }
+  .contact__label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #5a5a5a;
+    margin-bottom: 0.3125rem; }
+  .contact__input-field {
+    border: 1px solid #cecece;
+    height: 1.875rem;
+    width: 50%;
+    outline: none; }
+    @media only screen and (max-width: 56.25rem) {
+      .contact__input-field {
+        width: 100%; } }
+  .contact__textarea {
+    width: 50%;
+    border: 1px solid #cecece; }
+    @media only screen and (max-width: 56.25rem) {
+      .contact__textarea {
+        width: 100%; } }
+  .contact__button {
+    background: #3d4349;
+    margin-right: 1.25rem;
+    outline: none; }
+    @media only screen and (max-width: 37.5rem) {
+      .contact__button {
+        margin-right: 0.625rem;
+        font-size: 0.625rem; } }
+    .contact__button--active {
+      background: red; }
+    .contact__button-ticket {
+      width: 80%;
+      margin-left: 10%;
+      background: #007082; }
+      @media only screen and (max-width: 37.5rem) {
+        .contact__button-ticket {
+          width: 100%;
+          margin-left: 0px; } }
 
 /* Slider */
 .slick-slider {
