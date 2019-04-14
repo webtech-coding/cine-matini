@@ -1,7 +1,7 @@
 # Cine-matini
 A mock up website for an imaginary cine-matini movie theatre. It uses themoviedb.org api and is core ES6 js project.
 
-# features
+# Features
 Movie listing by Now-showing, Next-release, Top-rated and Popular. Detail views of each movie and video trailer. 
 
 
